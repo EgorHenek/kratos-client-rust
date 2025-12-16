@@ -26,7 +26,7 @@ pub struct UiNodeScriptAttributes {
     #[serde(rename = "integrity")]
     pub integrity: String,
     /// NodeType represents this node's types. It is a mirror of `node.type` and is primarily used to allow compatibility with OpenAPI 3.0. In this struct it technically always is \"script\". text Text input Input img Image a Anchor script Script div Division
-    #[serde(rename = "node_type")]
+    #[serde(rename = "node_type", default)]
     pub node_type: NodeTypeEnum,
     /// Nonce for CSP  A nonce you may want to use to improve your Content Security Policy. You do not have to use this value but if you want to improve your CSP policies you may use it. You can also choose to use your own nonce value!
     #[serde(rename = "nonce")]

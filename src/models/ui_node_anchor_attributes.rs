@@ -20,7 +20,7 @@ pub struct UiNodeAnchorAttributes {
     #[serde(rename = "id")]
     pub id: String,
     /// NodeType represents this node's types. It is a mirror of `node.type` and is primarily used to allow compatibility with OpenAPI 3.0.  In this struct it technically always is \"a\". text Text input Input img Image a Anchor script Script div Division
-    #[serde(rename = "node_type")]
+    #[serde(rename = "node_type", default)]
     pub node_type: NodeTypeEnum,
     #[serde(rename = "title")]
     pub title: Box<models::UiText>,

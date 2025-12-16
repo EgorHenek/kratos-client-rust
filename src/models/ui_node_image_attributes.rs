@@ -20,7 +20,7 @@ pub struct UiNodeImageAttributes {
     #[serde(rename = "id")]
     pub id: String,
     /// NodeType represents this node's types. It is a mirror of `node.type` and is primarily used to allow compatibility with OpenAPI 3.0.  In this struct it technically always is \"img\". text Text input Input img Image a Anchor script Script div Division
-    #[serde(rename = "node_type")]
+    #[serde(rename = "node_type", default)]
     pub node_type: NodeTypeEnum,
     /// The image's source URL.  format: uri
     #[serde(rename = "src")]
